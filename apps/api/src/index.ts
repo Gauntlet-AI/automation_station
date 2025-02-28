@@ -35,8 +35,30 @@ const routes = app
 
 export type AppType = typeof routes;
 
-export default {
-  port: 3004,
+// Define the error interface
+interface ServerError extends Error {
+  code?: string;
+  errno?: number;
+  syscall?: string;
+}
+
+// Better server configuration with error handling
+const serverConfig = {
+  port: 3100,
   fetch: app.fetch,
   idleTimeout: 30,
+  error(error: ServerError) {
+    // Handle server startup errors
+    if (error.code === 'EADDRINUSE') {
+      console.error(`Port ${this.port} is already in use. Try a different port.`);
+      process.exit(1); // Exit cleanly
+    } else {
+      console.error('Server error:', error);
+    }
+  },
 };
+
+// Log server startup
+console.log(`Attempting to start server on port ${serverConfig.port}...`);
+
+export default serverConfig;

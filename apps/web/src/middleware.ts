@@ -1,6 +1,9 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export default clerkMiddleware();
+export default async function middleware(req: NextRequest) {
+  // The middleware is kept minimal - auth is handled at the component level with useAuth
+  return NextResponse.next();
+}
 
 export const config = {
   matcher: [

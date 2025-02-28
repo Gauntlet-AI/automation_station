@@ -17,7 +17,7 @@ services:
   - key: DATABASE_URL
     sync: false
   - key: PORT
-    value: "3004"
+    value: "3008"
     sync: false
   region: oregon
   buildCommand: pnpm install --frozen-lockfile
