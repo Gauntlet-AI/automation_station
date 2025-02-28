@@ -188,6 +188,170 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 w-full">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Simple, Transparent Pricing</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Choose the plan that fits your productivity needs, with no hidden fees
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Free Tier */}
+            <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800 overflow-hidden transition-all hover:shadow-lg">
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Free</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">Perfect for getting started</p>
+                <div className="flex items-baseline mb-6">
+                  <span className="text-4xl font-bold">$0</span>
+                  <span className="text-gray-600 dark:text-gray-400 ml-2">/month</span>
+                </div>
+                <Button className="w-full mb-6">Start Free</Button>
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Basic automation detection</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Up to 5 automated tasks</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Single device support</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Pro Tier */}
+            <div className="rounded-xl border-2 border-violet-600 bg-white dark:bg-gray-800 overflow-hidden transition-all hover:shadow-lg relative">
+              <div className="absolute top-0 w-full bg-gradient-to-r from-violet-600 to-blue-600 text-white text-center py-1 text-sm font-medium">
+                Most Popular
+              </div>
+              <div className="p-6 pt-9">
+                <h3 className="text-xl font-bold mb-2">Pro</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">For professionals seeking productivity</p>
+                <div className="flex items-baseline mb-6">
+                  <span className="text-4xl font-bold">$29</span>
+                  <span className="text-gray-600 dark:text-gray-400 ml-2">/month</span>
+                </div>
+                <Button className="w-full mb-6 bg-gradient-to-r from-violet-600 to-blue-600">
+                  Get Started
+                </Button>
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Advanced pattern recognition</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Unlimited automated tasks</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Multi-device sync</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Detailed analytics dashboard</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Premium AI models</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Enterprise Tier */}
+            <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800 overflow-hidden transition-all hover:shadow-lg">
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Enterprise</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">For teams and organizations</p>
+                <div className="flex items-baseline mb-6">
+                  <span className="text-4xl font-bold">$99</span>
+                  <span className="text-gray-600 dark:text-gray-400 ml-2">/month</span>
+                </div>
+                <Button variant="outline" className="w-full mb-6">Contact Sales</Button>
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Everything in Pro</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Team collaboration tools</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Custom integrations</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Dedicated account manager</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Priority support</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-8 mt-12">
+            <h3 className="text-xl font-semibold mb-4 text-center">Frequently Asked Questions</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-medium mb-2">Can I upgrade or downgrade my plan?</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.</p>
+              </div>
+              <div>
+                <h4 className="font-medium mb-2">Is there a free trial?</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">Yes, all paid plans come with a 14-day free trial, no credit card required.</p>
+              </div>
+              <div>
+                <h4 className="font-medium mb-2">What payment methods do you accept?</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">We accept all major credit cards, PayPal, and for Enterprise customers, we also support invoicing.</p>
+              </div>
+              <div>
+                <h4 className="font-medium mb-2">Do you offer refunds?</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">We offer a 30-day money-back guarantee for all plans if you're not satisfied with our service.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 w-full">
         <div className="container mx-auto px-4">
