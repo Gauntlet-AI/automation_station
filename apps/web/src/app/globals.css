@@ -119,11 +119,13 @@
   --color-sidebar: var(--sidebar);
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-gradient-slow: gradient-slow 8s ease infinite alternate;
 
   @keyframes accordion-down {
     from {
       height: 0;
     }
+
     to {
       height: var(--radix-accordion-content-height);
     }
@@ -133,8 +135,23 @@
     from {
       height: var(--radix-accordion-content-height);
     }
+
     to {
       height: 0;
+    }
+  }
+
+  @keyframes gradient-slow {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
     }
   }
 }
@@ -143,7 +160,13 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.animate-gradient-slow {
+  animation: gradient-slow 8s ease infinite;
+  background-size: 300% 300%;
 }
